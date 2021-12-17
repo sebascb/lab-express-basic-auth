@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+<p>You are trying to login.</p>
+
+<form action='/login' method='POST'>
+
+  <label for='username'>Username</label>
+  <input type='text' name='username' placeholder='Your username goes here!'/>
+
+  <label for='password'>Password</label>
+  <input type='password' name='password' placeholder='Your password goes here!'/>
+
+  <button type='submit'>Create account</button>
+
+</form>
+
+{{#if errorMessage}}
+  <div>{{errorMessage}}</div>
+{{/if}}
