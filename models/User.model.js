@@ -7,17 +7,8 @@ const userSchema = new Schema({
     unique: true,
     required: true
   },
-  password: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: [true, 'Email es required.'],
-    unique: true,
-    lowercase: true,
-    trim: true
-  }
+  passwordHash: String
+
 });
 
 module.exports = model('User', userSchema);
